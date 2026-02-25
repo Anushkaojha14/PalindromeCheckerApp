@@ -1,14 +1,23 @@
-public class UseCase1PalindromeCheckerApp { 
-    static final String APP_NAME = "Palindrome Checker App";
-    static final String APP_VERSION = "1.0";
+public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
-        System.out.println("========================================");
-        System.out.println("        WELCOME TO PALINDROME APP       ");
-        System.out.println("========================================");
-        System.out.println("Application Name : " + APP_NAME);
-        System.out.println("Application Version : " + APP_VERSION);
-        System.out.println("\nApplication started successfully.");
-        System.out.println("System is ready for next use case.");
+        String word = "madam";
+
+        System.out.println("===================================");
+        System.out.println("    PALINDROME CHECKER - UC2      ");
+        System.out.println("===================================");
+        System.out.println("Given Word: " + word);
+        String reversed = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+        if (word.equals(reversed)) {
+            System.out.println("Result: The given word is a PALINDROME.");
+        } else {
+            System.out.println("Result: The given word is NOT a palindrome.");
+        }
+
+        System.out.println("Program execution completed.");
     }
 }
